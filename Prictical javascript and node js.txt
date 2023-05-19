@@ -1,0 +1,54 @@
+1> ANS>
+ Node.js is an opne source and cross platform Javascript runtime environment and library to run web applications outside the client' s browser. it is used to create server-side web applications.
+    = Node.js runs on various platforms( window ,linux, unix, mac OSX . etc.)
+
+2 >ANS>
+ Consider modules to be the same as Javascript or python libraries.
+   Modules can be a set of functions you want to include in your application.
+      Node.js has a set of built-in modules which you can without any further installation.
+
+3>ANS>
+        Source code:
+ var http = require( 'http')
+
+  http.creatServer( function ( req, res) {
+        res. write( 'Hello Client, I am your web server responding you !!!;);
+            res.end();
+              console.log( 'Web Server is running at 8080port number;)
+}).listen(8080);
+
+   Output:
+        PS F:\ Jetking MCQ's\Node.js>node server.js
+        Web Server is running at 8080 port number
+                    
+                Hello Client, I am your web server responding you !!!
+
+
+4> ANS>
+         var http = require( 'http' );
+             var fs = require( 'fs' );
+           http.createServer( function (req, res)  {
+        fs. readFile( 'demofile1.html', function(err, data)  {
+            res.writeHead(200,  { 'Content-Type' : 'text/html' });
+            res.write(data);
+            console.log("Server is runningat 8080 port number')
+           return res.end();
+     });
+  }).listen(8080);
+
+
+      demofile1.html
+   <!DOCTYPE HTML>
+  <html lang="en">
+  <head>
+              <meta charset="UTF-8">
+             <meta http-equiv="X-UA-Compatibe" content="IE=edge">
+             <meta name="viewport" content="width=device-width, initial- scale=1.0">
+            <title>Node.js File System</title
+</head>
+
+<body>
+          <h1>Reading HTML File</h1>
+          <p>Node.js file that reads the HTML file and return the content</p>
+</bodt>
+</html>
